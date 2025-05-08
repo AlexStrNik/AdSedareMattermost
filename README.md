@@ -1,10 +1,10 @@
-# AdsedareMattermost
+# AdSedareMattermost
 
-AdsedareMattermost is a two-factor authentication provider for Adsedare that uses Mattermost to receive the 2FA code. It expects a lambda function that will extract the 2FA code from the array fo latest messages. This way it can be used with any SMS relay bots. It will wait for the 2FA code for a specified amount of time and retry if lambda function does not return a value.
+AdSedareMattermost is a two-factor authentication provider for Adsedare that uses Mattermost to receive the 2FA code. It expects a lambda function that will extract the 2FA code from the array fo latest messages. This way it can be used with any SMS relay bots. It will wait for the 2FA code for a specified amount of time and retry if lambda function does not return a value.
 
 ## Configuration
 
-````bash
+```bash
 export ADSEDARE_MM_TOKEN="mrm_your_bot_token"
 export ADSEDARE_MM_HOST="https://your_mattermost_instance.com"
 
@@ -18,6 +18,7 @@ export ADSEDARE_MM_CHANNEL_NAME="Your Channel Name"
 
 export ADSEDARE_MM_TIMEOUT_SECONDS="5" # How many seconds to wait for the 2FA code
 export ADSEDARE_MM_RETRY_LIMIT="5" # How many times to retry
+```
 
 ## Usage
 
@@ -29,4 +30,4 @@ provider = AdsedareMattermost::Provider.new(
     end
 )
 Starship::set_provider(provider)
-````
+```
