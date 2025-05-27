@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "adsedare"
+  spec.add_dependency "adsedare", "~> 0.0.6"
   spec.add_dependency "faraday", "~> 2.7"
 end

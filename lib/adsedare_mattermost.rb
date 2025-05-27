@@ -127,8 +127,8 @@ module AdsedareMattermost
       raise Error, "2FA code not found"
     end
 
-    def can_handle?(type)
-      true
+    def two_factor_type
+      "phone"
     end
   end
 end
